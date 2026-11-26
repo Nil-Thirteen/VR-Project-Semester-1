@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class TimerLogic : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class TimerLogic : MonoBehaviour
     {
         clock1.Play();
         clock2.Stop();
-        //switchButton.
+        //Collider.OnTriggerEnter
 
     }
 
@@ -32,6 +33,10 @@ public class TimerLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("A collider has entered the button trigger");
     }
 }
